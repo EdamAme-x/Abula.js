@@ -13,28 +13,28 @@ export function createAbula(base: Hono): Abula {
     const app: Abula = Object.create(base);
     app.abula = true;
     app.gets = (path: string[], ...handler: any[]) => {
-        for (const p in path) {
+        for (const p of path) {
             app.get(p, ...handler)
         }
 
         return app;
     }
     app.posts = (path: string[], ...handler: any[]) => {
-        for (const p in path) {
+        for (const p of path) {
             app.post(p, ...handler)
         }
 
         return app;
     }
     app.puts = (path: string[], ...handler: any[]) => {
-        for (const p in path) {
+        for (const p of path) {
             app.put(p, ...handler)
         }
 
         return app;
     }
     app.deletes = (path: string[], ...handler: any[]) => {
-        for (const p in path) {
+        for (const p of path) {
             app.delete(p, ...handler)
         }
 

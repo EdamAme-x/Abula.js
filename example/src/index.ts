@@ -14,6 +14,7 @@ app.gets(['/en', '/ja'], (c: Context) => {
 
 const port = 3000
 console.log(`Server is running on port ${port}`)
+app.showRoutes()
 
 serve({
   fetch: app.fetch,
