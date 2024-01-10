@@ -1,0 +1,12 @@
+{
+	"scripts": {
+		"dev": "tsx watch src/index.ts",
+		"compile": "tsc ./Abula.js/index.ts ./dist/index.js --dts"
+	},
+	"dependencies": {
+		"hono": "^3.12.0"
+	},
+	"devDependencies": {
+		"tsx": "^3.14.0"
+	}
+}
