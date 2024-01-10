@@ -10,7 +10,7 @@ export type Abula = Hono & {
 
 export function createAbula(base: Hono): Abula {
     // @ts-ignore
-    const app: Abula = base;
+    const app: Abula = Object.create(base);
     app.abula = true;
     app.gets = (path: string[], ...handler: any[]) => {
         for (const p in path) {
